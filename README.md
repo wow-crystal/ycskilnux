@@ -1,2 +1,0 @@
-# ycskilnux
-yucheng skinliux website

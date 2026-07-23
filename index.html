@@ -3,430 +3,1014 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>郁宬 YU CHENG SKINLUX｜Cellex MiR 外泌體精華</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
+<title>郁宬 YU CHENG SKINLUX × Cellex miR｜屏障修復精華液</title>
 
-  :root{
-    --gold: #B8AC95;
-    --gold-deep: #9C8E72;
-    --cream: #FAF7F2;
-    --cream-deep: #F1EBE0;
-    --ink: #404040;
-    --ink-soft: #6B6558;
-    --line: #DDD5C4;
-  }
-
-  *{ margin:0; padding:0; box-sizing:border-box; }
-
-  body{
-    background: var(--cream);
-    color: var(--ink);
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    line-height: 1.9;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  h1,h2,h3, .display{
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-  }
-
-  .eyebrow{
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    letter-spacing: 0.15em;
-    color: var(--gold-deep);
-    font-size: 0.95rem;
-    text-transform: uppercase;
-  }
-
-  .wrap{ max-width: 880px; margin: 0 auto; padding: 0 28px; }
-
-  /* ---- HERO ---- */
-  .hero{
-    padding: 100px 0 80px;
-    text-align: center;
-    border-bottom: 1px solid var(--line);
-    position: relative;
-  }
-  .hero .mark{
-    width: 64px; height: 64px; margin: 0 auto 28px;
-    border: 1.5px solid var(--gold);
-    border-radius: 50%;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Cormorant Garamond', serif;
-    font-size: 1.6rem; color: var(--gold-deep); letter-spacing: 0.05em;
-  }
-  .hero h1{
-    font-size: clamp(1.9rem, 4.2vw, 2.9rem);
-    line-height: 1.5;
-    margin: 0 auto 20px;
-    max-width: 620px;
-    color: var(--ink);
-  }
-  .hero h1 em{
-    font-style: normal;
-    color: var(--gold-deep);
-    border-bottom: 1px solid var(--gold);
-  }
-  .hero p.sub{
-    color: var(--ink-soft);
-    font-size: 1.05rem;
-    max-width: 460px;
-    margin: 0 auto 40px;
-  }
-  .brandline{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.3em;
-    color: var(--gold-deep);
-    margin-bottom: 10px;
-  }
-
-  .btn{
-    display: inline-block;
-    padding: 16px 44px;
-    background: var(--ink);
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 0.1em;
-    border-radius: 2px;
-    transition: background 0.25s ease;
-  }
-  .btn:hover{ background: var(--gold-deep); }
-
-  /* ---- SECTION shared ---- */
-  section{ padding: 88px 0; }
-  section + section{ border-top: 1px solid var(--line); }
-  .section-head{ text-align:center; margin-bottom: 56px; }
-  .section-head h2{
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin-top: 10px;
-    color: var(--ink);
-  }
-
-  /* ---- 問題／症狀 ---- */
-  .problem-grid{
-    display:grid; grid-template-columns: repeat(3,1fr); gap: 32px;
-    margin-top: 8px;
-  }
-  .problem-grid div{ text-align:center; }
-  .problem-grid .num{
-    font-family:'Cormorant Garamond', serif;
-    font-size: 2.2rem; color: var(--gold); display:block; margin-bottom: 10px;
-  }
-  .problem-grid p{ color: var(--ink-soft); font-size: 0.95rem; }
-
-  /* ---- 好處 ---- */
-  .benefit-row{
-    display:flex; gap: 40px; align-items:flex-start;
-    padding: 28px 0; border-bottom: 1px dashed var(--line);
-  }
-  .benefit-row:last-child{ border-bottom:none; }
-  .benefit-row .tag{
-    font-family:'Cormorant Garamond', serif;
-    font-size: 1.1rem; color: var(--gold-deep); min-width: 130px; flex-shrink:0;
-  }
-  .benefit-row .txt h3{ font-size: 1.05rem; margin-bottom: 6px; font-weight: 500;}
-  .benefit-row .txt p{ color: var(--ink-soft); font-size: 0.92rem; }
-
-  /* ---- 社證 placeholder ---- */
-  .social-placeholder{
-    background: var(--cream-deep);
-    border: 1px dashed var(--gold);
-    padding: 40px;
-    text-align: center;
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-    border-radius: 4px;
-  }
-
-  /* ---- 成分 ---- */
-  .ingredient-cards{
-    display:grid; grid-template-columns: 1fr 1fr; gap: 28px;
-  }
-  .ing-card{
-    background: white; border: 1px solid var(--line); padding: 32px;
-  }
-  .ing-card h3{ font-size: 1.1rem; margin-bottom: 4px; }
-  .ing-card .type{ font-size: 0.8rem; color: var(--gold-deep); margin-bottom: 20px; letter-spacing: 0.05em;}
-  .ing-card ul{ list-style:none; }
-  .ing-card li{
-    display:flex; justify-content: space-between;
-    padding: 10px 0; border-bottom: 1px solid var(--cream-deep);
-    font-size: 0.88rem;
-  }
-  .ing-card li span:last-child{ color: var(--gold-deep); font-weight: 500; }
-
-  /* ---- 使用方式 ---- */
-  .steps{ display:grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
-  .step{ text-align:center; }
-  .step .circle{
-    width: 46px; height:46px; border-radius:50%;
-    border: 1px solid var(--gold); color: var(--gold-deep);
-    display:flex; align-items:center; justify-content:center;
-    margin: 0 auto 16px; font-family:'Cormorant Garamond',serif; font-size:1.2rem;
-  }
-  .step p{ font-size: 0.88rem; color: var(--ink-soft); }
-  .step h4{ font-size: 0.95rem; margin-bottom: 8px; font-weight: 500; }
-
-  /* ---- 認證 ---- */
-  .cert-list{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align:center; }
-  .cert-list div{ padding: 26px 16px; background: white; border: 1px solid var(--line); }
-  .cert-list .cert-name{ font-size: 0.95rem; margin-bottom: 8px; font-weight:500; }
-  .cert-list .cert-desc{ font-size: 0.8rem; color: var(--ink-soft); }
-  .factory-note{
-    margin-top: 32px; text-align:center; color: var(--ink-soft); font-size: 0.88rem;
-    max-width: 560px; margin-left:auto; margin-right:auto;
-  }
-
-  /* ---- FAQ ---- */
-  .faq-item{ border-bottom: 1px solid var(--line); padding: 22px 0; }
-  .faq-item h4{ font-size: 0.98rem; margin-bottom: 8px; font-weight: 500; }
-  .faq-item p{ font-size: 0.9rem; color: var(--ink-soft); }
-
-  /* ---- CTA ---- */
-  .cta-block{
-    text-align:center; background: var(--ink); color: var(--cream); padding: 90px 28px;
-  }
-  .cta-block .eyebrow{ color: var(--gold); }
-  .cta-block h2{ color: var(--cream); font-size: clamp(1.5rem,3vw,2.1rem); margin: 12px 0 20px; }
-  .price{
-    font-family:'Cormorant Garamond', serif; font-size: 2.4rem; color: var(--gold);
-    margin-bottom: 30px;
-  }
-  .price span{ font-size: 1rem; color: #cfc6ae; }
-  .cta-block .btn{ background: var(--gold); color: var(--ink); }
-  .cta-block .btn:hover{ background: var(--cream); }
-
-  footer{
-    text-align:center; padding: 40px 20px; font-size: 0.78rem; color: var(--ink-soft);
-    background: var(--cream);
-  }
-
-  @media (max-width: 640px){
-    .problem-grid{ grid-template-columns: 1fr; gap: 28px; }
-    .ingredient-cards{ grid-template-columns: 1fr; }
-    .steps{ grid-template-columns: 1fr; gap: 30px; }
-    .cert-list{ grid-template-columns: 1fr; }
-    .benefit-row{ flex-direction: column; gap: 8px; }
-    section{ padding: 64px 0; }
-  }
-</style>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yuchengskinlux.netlify.app/">
+<meta property="og:title" content="郁宬 YU CHENG SKINLUX × Cellex miR｜屏障修復精華液">
+<meta property="og:description" content="保養一直沒進步，可能不是產品不夠好，是屏障根本沒修好。Cellex miR 外泌體肌活精華液，用細胞級外泌體技術，把修復力補回來。">
+<meta property="og:image" content="https://res.cloudinary.com/hixaesl1/image/upload/v1784810438/yucheng-cellexrnd/2026-07-24-launch/og-image_1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<!-- ============================================================
+  郁宬 YU CHENG SKINLUX × CellexRnD Landing Page
+  區塊①：Hero
+  品牌色：暖米棕 #B8AC95 ／ 米白 #FAF7F2 ／ 深灰文字 #404040
+============================================================ -->
+<style>
+  :root {
+    --brand-brown: #B8AC95;
+    --brand-brown-dark: #96876A;
+    --brand-cream: #FAF7F2;
+    --brand-text: #404040;
+    --brand-white: #FFFFFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: var(--brand-text);
+    background: var(--brand-cream);
+    line-height: 1.7;
+  }
 
-<!-- HERO -->
-<div class="hero">
-  <div class="wrap">
-    <div class="brandline">YU CHENG SKINLUX</div>
-    <div class="mark">郁</div>
-    <h1>肌膚的疲態，<br>不是老化，是<em>訊號斷了</em></h1>
-    <p class="sub">Cellex MiR 外泌體精華，用細胞間的溝通訊號，喚醒肌膚自己的修護力</p>
-    <a href="#pricing" class="btn">了解產品</a>
-  </div>
-</div>
+  .hero {
+    position: relative;
+    background: radial-gradient(circle at 75% 20%, #EFE8DC 0%, var(--brand-cream) 55%);
+    padding: 72px 24px 88px;
+    overflow: hidden;
+  }
+  .hero__eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: var(--brand-brown-dark);
+    border: 1px solid var(--brand-brown);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin: 0 auto 28px;
+    text-align: center;
+  }
+  .hero__inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero__eyebrow-wrap { text-align: center; }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    line-height: 1.45;
+    color: #2E2E2E;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+  }
+  .hero h1 span {
+    color: var(--brand-brown-dark);
+  }
+  .hero__sub {
+    font-size: clamp(15px, 2.2vw, 18px);
+    color: #5C5C5C;
+    max-width: 520px;
+    margin: 0 auto 40px;
+  }
 
-<!-- 問題原因 + 症狀 -->
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">The Problem</div>
-      <h2>保養品越用越多，肌膚卻越來越沒反應？</h2>
-    </div>
-    <div class="problem-grid">
-      <div>
-        <span class="num">01</span>
-        <p>成分一直補充，但肌膚吸收效率隨年齡下降，補了也留不住</p>
-      </div>
-      <div>
-        <span class="num">02</span>
-        <p>細胞間的「溝通訊號」變弱，皮膚不知道該啟動修護，只能被動老化</p>
-      </div>
-      <div>
-        <span class="num">03</span>
-        <p>市面產品成分濃度模糊帶過，花了錢卻不知道到底補了什麼</p>
-      </div>
-    </div>
-  </div>
-</section>
+  /* 產品視覺區（佔位，待實拍照片替換） */
+  .hero__visual {
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
+    margin: 0 auto 40px;
+    background: linear-gradient(160deg, #FFFFFF 0%, #F1EBE0 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px -20px rgba(150, 135, 106, 0.35);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 32px;
+  }
 
-<!-- 好處 -->
-<section style="background:var(--cream-deep);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">A Different Approach</div>
-      <h2>外泌體做的不是補充，是喚醒</h2>
+  .hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn--primary {
+    background: var(--brand-brown-dark);
+    color: #FFFFFF;
+    box-shadow: 0 10px 24px -8px rgba(150, 135, 106, 0.6);
+  }
+  .btn--primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -8px rgba(150, 135, 106, 0.7); }
+  .btn--secondary {
+    background: #FFFFFF;
+    color: var(--brand-brown-dark);
+    border: 1.5px solid var(--brand-brown);
+  }
+  .btn--secondary:hover { transform: translateY(-2px); }
+
+  .hero__note {
+    margin-top: 22px;
+    font-size: 13px;
+    color: #9A9A9A;
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 56px 20px 64px; }
+    .btn { flex: 1 1 auto; justify-content: center; }
+  }
+</style>
+
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__eyebrow-wrap">
+      <span class="hero__eyebrow">韓國原廠 CellexRnD 台灣總代理</span>
     </div>
 
-    <div class="benefit-row">
-      <div class="tag">啟動修護</div>
-      <div class="txt">
-        <h3>讓肌膚重新「聽懂」訊號</h3>
-        <p>外泌體攜帶訊息分子，刺激肌膚細胞自己啟動修護機制，而不是單純被動吸收成分。</p>
-      </div>
-    </div>
-    <div class="benefit-row">
-      <div class="tag">溫和不刺激</div>
-      <div class="txt">
-        <h3>敏感肌也能安心建立日常保養</h3>
-        <p>植物性外泌體來源，質地清透好吸收，適合正在重建肌膚屏障的人。</p>
-      </div>
-    </div>
-    <div class="benefit-row">
-      <div class="tag">看得懂的透明</div>
-      <div class="txt">
-        <h3>每個成分濃度都寫清楚</h3>
-        <p>不是模糊的「添加外泌體」，我們把顆粒數、ppm 濃度都攤在陽光下給你看。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 社證 placeholder -->
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">In Their Words</div>
-      <h2>真實顧客回饋</h2>
-    </div>
-    <div class="social-placeholder">
-      這裡預留給真實顧客的使用心得與評價。<br>
-      等你有第一批真實回饋（文字或截圖都可以）貼給我，我會把這區換成真的——在那之前，這裡先保持空白，不放編造的評論。
-    </div>
-  </div>
-</section>
-
-<!-- 成分 -->
-<section style="background:var(--cream-deep);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Formulation</div>
-      <h2>成分，經得起放大看</h2>
-    </div>
-    <div class="ingredient-cards">
-      <div class="ing-card">
-        <h3>Exosome Skin Booster Serum</h3>
-        <div class="type">精華液</div>
-        <ul>
-          <li><span>Centella Exosomes</span><span>10 億顆粒</span></li>
-          <li><span>Niacinamide</span><span>20,000 ppm</span></li>
-          <li><span>Adenosine</span><span>400 ppm</span></li>
-          <li><span>Multi-Peptides</span><span>5 ppm</span></li>
-          <li><span>Hyaluronic Acid</span><span>500 ppm</span></li>
-        </ul>
-      </div>
-      <div class="ing-card">
-        <h3>Exosome Skin Booster Ampoule</h3>
-        <div class="type">安瓶</div>
-        <ul>
-          <li><span>Centella Exosomes</span><span>10 億顆粒</span></li>
-          <li><span>PDRN</span><span>1,000 ppm</span></li>
-          <li><span>Multi-Peptides</span><span>5 ppm</span></li>
-          <li><span>Multi-Hyaluronic Acid</span><span>添加</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 使用方式 -->
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">How To Use</div>
-      <h2>三步驟，融入日常保養</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="circle">1</div>
-        <h4>清潔後使用</h4>
-        <p>徹底清潔肌膚，避免毛孔阻塞，讓活性成分能直達肌膚底層</p>
-      </div>
-      <div class="step">
-        <div class="circle">2</div>
-        <h4>早晚各一次</h4>
-        <p>取適量，指腹輕輕按摩全臉，細紋或暗沉處可加強塗抹</p>
-      </div>
-      <div class="step">
-        <div class="circle">3</div>
-        <h4>先局部測試</h4>
-        <p>敏感肌建議先在耳後或下顎線測試 48 小時，無不適再上臉</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 認證 -->
-<section style="background:var(--cream-deep);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Manufacturing</div>
-      <h2>來自韓國的製造把關</h2>
-    </div>
-    <div class="cert-list">
-      <div>
-        <div class="cert-name">ISO 22716</div>
-        <div class="cert-desc">化妝品優良製造規範認證</div>
-      </div>
-      <div>
-        <div class="cert-name">ISO 9001</div>
-        <div class="cert-desc">品質管理系統認證</div>
-      </div>
-      <div>
-        <div class="cert-name">專利技術</div>
-        <div class="cert-desc">韓國智慧財產局登記專利</div>
-      </div>
-    </div>
-    <p class="factory-note">
-      由韓國 Beautist Co., Ltd. 製造，2014 年成立於京畿道平澤市，設有自有 R&D 研發實驗室與生產線，
-      合作品牌包含多個韓國美妝品牌的 OEM/ODM 代工。
+    <h1>保養一直沒進步，<br>可能不是產品不夠好，<br>是<span>屏障根本沒修好</span></h1>
+    <p class="hero__sub">
+      泛紅、刺痛、換季就過敏、擦什麼都吸收不了——這些訊號都在說同一件事：肌膚的修復力先顧好，保養才吃得進去。<br>
+      Cellex miR 外泌體肌活精華液，用細胞級外泌體技術，從根本把修復力補回來。
     </p>
+
+    <div class="hero__visual">
+      <img src="郁宬/S__125337625_0.jpg" alt="Cellex miR Exosome Skin Booster Serum 外泌體肌活精華液">
+    </div>
+
+    <div class="hero__cta">
+      <a href="https://ig.me/m/yc.skinlux" class="btn btn--primary" target="_blank" rel="noopener">IG 私訊問問看</a>
+      <a href="https://m.me/1163216400216764" class="btn btn--secondary" target="_blank" rel="noopener">FB 私訊問問看</a>
+    </div>
+    <p class="hero__note">先聊聊你的膚況，我們幫你判斷適不適合</p>
   </div>
 </section>
 
-<!-- FAQ -->
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">FAQ</div>
-      <h2>常見問題</h2>
+<!-- ============================================================
+  區塊②：症狀描述
+============================================================ -->
+<style>
+  .symptom {
+    background: #FFFFFF;
+    padding: 80px 24px;
+  }
+  .symptom__inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .symptom__title {
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 12px;
+  }
+  .symptom__title span { color: var(--brand-brown-dark); }
+  .symptom__desc {
+    font-size: 15px;
+    color: #6B6B6B;
+    margin-bottom: 44px;
+  }
+  .symptom__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    text-align: left;
+  }
+  .symptom__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--brand-cream);
+    border: 1px solid #EDE6D8;
+    border-radius: 16px;
+    padding: 20px 18px;
+  }
+  .symptom__check {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--brand-brown-dark);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .symptom__card p {
+    font-size: 14.5px;
+    color: #4A4A4A;
+    line-height: 1.6;
+  }
+  .symptom__card strong {
+    display: block;
+    font-size: 15.5px;
+    color: #2E2E2E;
+    margin-bottom: 4px;
+  }
+  .symptom__footer {
+    margin-top: 36px;
+    font-size: 15px;
+    color: #4A4A4A;
+    font-weight: 600;
+  }
+
+  @media (max-width: 560px) {
+    .symptom { padding: 56px 20px; }
+    .symptom__grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="symptom">
+  <div class="symptom__inner">
+    <h2 class="symptom__title">這些狀況，<span>是不是常常遇到</span>？</h2>
+    <p class="symptom__desc">屏障受損不會突然發生，它是一點一點累積的訊號</p>
+
+    <div class="symptom__grid">
+      <div class="symptom__card">
+        <span class="symptom__check">✓</span>
+        <p><strong>擦保養品會刺痛</strong>連溫和的化妝水都覺得有點刺、有點癢</p>
+      </div>
+      <div class="symptom__card">
+        <span class="symptom__check">✓</span>
+        <p><strong>換季就大爆走</strong>天氣一變、環境一換，臉就開始泛紅緊繃</p>
+      </div>
+      <div class="symptom__card">
+        <span class="symptom__check">✓</span>
+        <p><strong>洗完臉緊繃到不行</strong>要馬上擦保養品，不然臉會乾癢到受不了</p>
+      </div>
+      <div class="symptom__card">
+        <span class="symptom__check">✓</span>
+        <p><strong>保養品好像沒吸收</strong>擦了很多層，膚況還是沒什麼進步</p>
+      </div>
+      <div class="symptom__card">
+        <span class="symptom__check">✓</span>
+        <p><strong>小傷口/痘疤好得特別慢</strong>修復速度感覺比以前慢很多</p>
+      </div>
+      <div class="symptom__card">
+        <span class="symptom__check">✓</span>
+        <p><strong>醫美/做完療程特別敏感</strong>術後修復期拉得比別人長</p>
+      </div>
     </div>
 
-    <div class="faq-item">
-      <h4>外泌體保養品是不是行銷話術？</h4>
-      <p>外泌體的修護機制有科學研究基礎，但效果會因來源、製程與濃度不同而有落差。我們選擇把每項成分的實際添加濃度標示清楚，讓你自己判斷，而不是只靠一個熱門成分名稱說服你。</p>
+    <p class="symptom__footer">如果中了 2 項以上，代表你的肌膚屏障，需要被認真顧一次了</p>
+  </div>
+</section>
+
+<!-- ============================================================
+  區塊③：問題原因
+============================================================ -->
+<style>
+  .cause {
+    background: var(--brand-cream);
+    padding: 84px 24px;
+  }
+  .cause__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .cause__title {
+    font-size: clamp(22px, 4vw, 28px);
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .cause__title span { color: var(--brand-brown-dark); }
+  .cause__lead {
+    font-size: 14.5px;
+    color: #6B6B6B;
+    line-height: 1.9;
+  }
+
+  /* 屏障結構示意（雨傘比喻，SVG 繪製） */
+  .umbrella {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 32px 24px 24px;
+    box-shadow: 0 16px 40px -20px rgba(150, 135, 106, 0.3);
+    text-align: center;
+  }
+  .umbrella__caption {
+    margin-top: 14px;
+    font-size: 12.5px;
+    color: #A79C82;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .umbrella__caption b { color: var(--brand-brown-dark); }
+
+  .cause__list {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cause__item {
+    display: flex;
+    gap: 16px;
+  }
+  .cause__num {
+    flex: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: #D8CDB6;
+    line-height: 1;
+    width: 34px;
+  }
+  .cause__item p {
+    font-size: 14.5px;
+    color: #4A4A4A;
+    line-height: 1.7;
+  }
+  .cause__item strong {
+    display: block;
+    font-size: 15.5px;
+    color: #2E2E2E;
+    margin-bottom: 3px;
+  }
+
+  @media (max-width: 720px) {
+    .cause { padding: 60px 20px; }
+    .cause__inner { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+
+<section class="cause">
+  <div class="cause__inner">
+    <div>
+      <h2 class="cause__title">說白了，<br>屏障就是一把<span>傘</span></h2>
+      <p class="cause__lead">
+        想像屏障是你出門撐的一把傘，撐得好好的，風吹雨打都擋在外面，肌膚裡的水分也留得住。<br><br>
+        傘一旦破了洞，風雨直接灌進來，水分也跟著跑得更快——
+        這就是為什麼你會刺痛、乾癢、換季就大爆走。
+      </p>
+
+      <div class="umbrella">
+        <svg width="180" height="150" viewBox="0 0 180 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- 雨滴：被傘擋住，滑落在傘面兩側 -->
+          <g stroke="#B7C6D9" stroke-width="2.5" stroke-linecap="round">
+            <line x1="34" y1="8" x2="27" y2="24" />
+            <line x1="56" y1="2" x2="49" y2="18" />
+            <line x1="120" y1="2" x2="127" y2="18" />
+            <line x1="144" y1="8" x2="151" y2="24" />
+            <line x1="88" y1="0" x2="88" y2="14" />
+          </g>
+          <!-- 傘面 -->
+          <path d="M20 62 C20 30 160 30 160 62 C160 62 145 52 130 62 C115 72 105 52 90 62 C75 72 65 52 50 62 C35 72 20 62 20 62 Z"
+                fill="var(--brand-brown-dark)" />
+          <!-- 傘骨中線裝飾 -->
+          <path d="M20 62 C20 30 160 30 160 62" stroke="#8A7B5C" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <!-- 傘尖 -->
+          <line x1="90" y1="30" x2="90" y2="22" stroke="var(--brand-brown-dark)" stroke-width="3" stroke-linecap="round"/>
+          <!-- 傘柄 -->
+          <line x1="90" y1="62" x2="90" y2="128" stroke="#8A7B5C" stroke-width="4" stroke-linecap="round"/>
+          <path d="M90 128 C90 140 74 140 74 128" stroke="#8A7B5C" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <p class="umbrella__caption">傘撐得好 ＝ <b>健康的屏障</b><br>擋得住刺激，也留得住水分</p>
+      </div>
     </div>
-    <div class="faq-item">
-      <h4>敏感肌可以使用嗎？</h4>
-      <p>可以，但建議先在耳後或下顎線局部測試 48 小時，確認無紅癢反應再上臉使用，這是任何新保養品都建議的謹慎作法。</p>
-    </div>
-    <div class="faq-item">
-      <h4>精華液和安瓶要一起用嗎？</h4>
-      <p>兩者可依需求單獨使用或搭配：精華液日常保養即可，安瓶濃度更高，適合加強修護時期使用，建議先從精華液開始建立耐受度。</p>
-    </div>
-    <div class="faq-item">
-      <h4>可以跟 A 醇一起使用嗎？</h4>
-      <p>可以，兩者是常見的搭配組合。A 醇促進代謝的同時容易造成乾燥刺激，外泌體的修護特性能幫助穩定肌膚、降低不適感。</p>
+
+    <div>
+      <div class="cause__list">
+        <div class="cause__item">
+          <span class="cause__num">01</span>
+          <p><strong>清潔或去角質過度</strong>洗臉太勤、酸類產品疊太多層，把水泥一起洗掉了</p>
+        </div>
+        <div class="cause__item">
+          <span class="cause__num">02</span>
+          <p><strong>醫美/微針療程後</strong>術後修復期屏障本來就脆弱，這時候特別需要加強照顧</p>
+        </div>
+        <div class="cause__item">
+          <span class="cause__num">03</span>
+          <p><strong>季節交替、環境刺激</strong>溫濕度變化、外出風吹日曬，都在消耗屏障的修復力</p>
+        </div>
+        <div class="cause__item">
+          <span class="cause__num">04</span>
+          <p><strong>年齡增長</strong>皮脂分泌自然下降，屏障修復的速度也跟著變慢</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<div class="cta-block" id="pricing">
-  <div class="eyebrow">Cellex MiR</div>
-  <h2>從今天開始，讓肌膚重新聽懂訊號</h2>
-  <div class="price">NT$ 2,000<span>–</span>3,000</div>
-  <a href="#" class="btn">立即選購</a>
-</div>
+<!-- ============================================================
+  區塊④：解決後的好處
+============================================================ -->
+<style>
+  .benefit {
+    background: #FFFFFF;
+    padding: 84px 24px;
+  }
+  .benefit__inner {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .benefit__title {
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 12px;
+  }
+  .benefit__title span { color: var(--brand-brown-dark); }
+  .benefit__desc {
+    font-size: 15px;
+    color: #6B6B6B;
+    margin-bottom: 48px;
+  }
 
-<footer>
-  © YU CHENG SKINLUX 郁宬．All ingredient concentrations as labeled by manufacturer.
-</footer>
+  .benefit__row {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    text-align: left;
+  }
+  .benefit__before,
+  .benefit__after {
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .benefit__before {
+    background: #F5F5F3;
+    color: #8A8A8A;
+  }
+  .benefit__after {
+    background: #F4EFE4;
+    color: #2E2E2E;
+    font-weight: 500;
+    border: 1px solid #E4D9C2;
+  }
+  .benefit__arrow {
+    text-align: center;
+    color: var(--brand-brown-dark);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .benefit__label {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .benefit__before .benefit__label { color: #ADADAD; }
+  .benefit__after .benefit__label { color: var(--brand-brown-dark); }
 
+  @media (max-width: 640px) {
+    .benefit { padding: 60px 20px; }
+    .benefit__row {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .benefit__arrow {
+      transform: rotate(90deg);
+      margin: -2px 0;
+    }
+  }
+</style>
+
+<section class="benefit">
+  <div class="benefit__inner">
+    <h2 class="benefit__title">傘補好之後，<span>會發生這些改變</span></h2>
+    <p class="benefit__desc">不是奇蹟式的翻天覆地，是肌膚一點一點找回原本該有的狀態</p>
+
+    <div class="benefit__row">
+      <div class="benefit__before">
+        <span class="benefit__label">現在</span>
+        擦化妝水、精華液會刺痛、發癢
+      </div>
+      <div class="benefit__arrow">→</div>
+      <div class="benefit__after">
+        <span class="benefit__label">顧好屏障後</span>
+        保養品擦上去服服貼貼，沒有不舒服的感覺
+      </div>
+    </div>
+
+    <div class="benefit__row">
+      <div class="benefit__before">
+        <span class="benefit__label">現在</span>
+        一換季、天氣一變就泛紅緊繃
+      </div>
+      <div class="benefit__arrow">→</div>
+      <div class="benefit__after">
+        <span class="benefit__label">顧好屏障後</span>
+        對溫濕度變化的耐受度變高，膚況更穩定
+      </div>
+    </div>
+
+    <div class="benefit__row">
+      <div class="benefit__before">
+        <span class="benefit__label">現在</span>
+        洗完臉緊繃到要馬上補保養
+      </div>
+      <div class="benefit__arrow">→</div>
+      <div class="benefit__after">
+        <span class="benefit__label">顧好屏障後</span>
+        肌膚自己留得住水，不再乾癢緊繃
+      </div>
+    </div>
+
+    <div class="benefit__row">
+      <div class="benefit__before">
+        <span class="benefit__label">現在</span>
+        擦了很多層保養品，感覺沒吸收
+      </div>
+      <div class="benefit__arrow">→</div>
+      <div class="benefit__after">
+        <span class="benefit__label">顧好屏障後</span>
+        養分留得住，保養的成效才看得出來
+      </div>
+    </div>
+
+    <div class="benefit__row">
+      <div class="benefit__before">
+        <span class="benefit__label">現在</span>
+        小傷口、痘疤癒合特別慢
+      </div>
+      <div class="benefit__arrow">→</div>
+      <div class="benefit__after">
+        <span class="benefit__label">顧好屏障後</span>
+        修復速度回到該有的節奏
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  區塊⑤：原料／技術實證
+============================================================ -->
+<style>
+  .ingredient {
+    background: var(--brand-cream);
+    padding: 84px 24px;
+  }
+  .ingredient__inner {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ingredient__eyebrow {
+    display: inline-block;
+    font-size: 12.5px;
+    letter-spacing: 0.1em;
+    color: var(--brand-brown-dark);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .ingredient__title {
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 12px;
+  }
+  .ingredient__title span { color: var(--brand-brown-dark); }
+  .ingredient__desc {
+    font-size: 15px;
+    color: #6B6B6B;
+    max-width: 560px;
+    margin: 0 auto 48px;
+  }
+
+  .ingredient__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    text-align: left;
+  }
+  .ingredient__card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 26px 22px;
+    box-shadow: 0 12px 32px -18px rgba(150, 135, 106, 0.35);
+  }
+  .ingredient__card--wide {
+    grid-column: span 1;
+  }
+  .ingredient__badge {
+    display: inline-block;
+    background: var(--brand-cream);
+    color: var(--brand-brown-dark);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .ingredient__name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 4px;
+  }
+  .ingredient__name small {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #A79C82;
+    margin-top: 2px;
+  }
+  .ingredient__text {
+    font-size: 13.5px;
+    color: #6B6B6B;
+    line-height: 1.7;
+    margin-top: 10px;
+  }
+
+  .ingredient__note {
+    margin-top: 36px;
+    font-size: 12.5px;
+    color: #A79C82;
+  }
+
+  @media (max-width: 760px) {
+    .ingredient { padding: 60px 20px; }
+    .ingredient__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .ingredient__grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="ingredient">
+  <div class="ingredient__inner">
+    <span class="ingredient__eyebrow">韓國原廠 CELLEXRND ／ 外泌體修復技術</span>
+    <h2 class="ingredient__title">先懂原因，<span>再看靠什麼修</span></h2>
+    <p class="ingredient__desc">Cellex miR 外泌體肌活精華液，把「重建屏障」這件事，交給 5 個有明確作用的成分</p>
+
+    <div class="ingredient__grid">
+      <div class="ingredient__card">
+        <span class="ingredient__badge">核心技術</span>
+        <div class="ingredient__name">Centella Exosomes<small>積雪草外泌體</small></div>
+        <p class="ingredient__text">外泌體是細胞之間傳遞「修復訊息」的載體，把訊號直接送到需要修復的地方，是這瓶精華的核心技術。</p>
+      </div>
+      <div class="ingredient__card">
+        <span class="ingredient__badge">400ppm</span>
+        <div class="ingredient__name">Adenosine<small>腺苷</small></div>
+        <p class="ingredient__text">加速肌膚自我修復的速度，讓受損的屏障能更快回到穩定狀態。</p>
+      </div>
+      <div class="ingredient__card">
+        <span class="ingredient__badge">5ppm</span>
+        <div class="ingredient__name">Multi-Peptides<small>多重胜肽</small></div>
+        <p class="ingredient__text">傳遞修復訊息、支持屏障結構重建，是幫肌膚「打地基」的角色。</p>
+      </div>
+      <div class="ingredient__card">
+        <span class="ingredient__badge">500ppm</span>
+        <div class="ingredient__name">Hyaluronic Acid<small>玻尿酸</small></div>
+        <p class="ingredient__text">把水分留在肌膚裡，讓屏障隨時保持在「有水撐著」的健康狀態，不容易乾癢緊繃。</p>
+      </div>
+      <div class="ingredient__card">
+        <span class="ingredient__badge">20,000ppm</span>
+        <div class="ingredient__name">Niacinamide<small>菸鹼醯胺</small></div>
+        <p class="ingredient__text">高濃度添加，強化屏障韌性，同時穩定膚況、抑制泛紅發炎的反應。</p>
+      </div>
+      <div class="ingredient__card">
+        <span class="ingredient__badge">技術來源</span>
+        <div class="ingredient__name">韓國原廠研發<small>CellexRnD</small></div>
+        <p class="ingredient__text">郁宬是 CellexRnD 台灣總代理，成分配方、濃度皆依原廠標準進口，非國內分裝或代工。</p>
+      </div>
+    </div>
+
+    <p class="ingredient__note">＊以上為原廠公開成分與濃度資訊，非醫療效能承諾，實際膚況因人而異</p>
+  </div>
+</section>
+
+<!-- ============================================================
+  區塊⑥：使用方式
+============================================================ -->
+<style>
+  .usage {
+    background: #FFFFFF;
+    padding: 84px 24px;
+  }
+  .usage__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .usage__title {
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 12px;
+  }
+  .usage__title span { color: var(--brand-brown-dark); }
+  .usage__desc {
+    font-size: 15px;
+    color: #6B6B6B;
+    margin-bottom: 48px;
+  }
+
+  .usage__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .usage__step {
+    background: var(--brand-cream);
+    border-radius: 16px;
+    padding: 22px 18px;
+    position: relative;
+  }
+  .usage__step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--brand-brown-dark);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .usage__step h3 {
+    font-size: 15px;
+    color: #2E2E2E;
+    margin-bottom: 6px;
+  }
+  .usage__step p {
+    font-size: 13px;
+    color: #6B6B6B;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 720px) {
+    .usage { padding: 60px 20px; }
+    .usage__steps { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 460px) {
+    .usage__steps { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="usage">
+  <div class="usage__inner">
+    <h2 class="usage__title">怎麼用，<span>才顧得到屏障</span></h2>
+    <p class="usage__desc">步驟不複雜，重點是「用對順序」讓精華先被吸收</p>
+
+    <div class="usage__steps">
+      <div class="usage__step">
+        <span class="usage__step-num">01</span>
+        <h3>潔面後、化妝水後</h3>
+        <p>先完成基礎清潔與保濕，讓肌膚處在乾淨、微濕潤的狀態</p>
+      </div>
+      <div class="usage__step">
+        <span class="usage__step-num">02</span>
+        <h3>取 2–3 滴</h3>
+        <p>倒在掌心，輕輕按壓於全臉，不要用力拉扯摩擦</p>
+      </div>
+      <div class="usage__step">
+        <span class="usage__step-num">03</span>
+        <h3>早晚各一次</h3>
+        <p>白天用完務必接續防曬，晚上可加強按壓加速吸收</p>
+      </div>
+      <div class="usage__step">
+        <span class="usage__step-num">04</span>
+        <h3>後續再接乳液／乳霜</h3>
+        <p>幫精華液鎖住，加強整體的保濕鎖水效果</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  區塊⑦：FAQ
+============================================================ -->
+<style>
+  .faq {
+    background: var(--brand-cream);
+    padding: 84px 24px;
+  }
+  .faq__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .faq__title {
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 700;
+    color: #2E2E2E;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .faq__title span { color: var(--brand-brown-dark); }
+  .faq__desc {
+    font-size: 15px;
+    color: #6B6B6B;
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  .faq__item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    box-shadow: 0 10px 26px -18px rgba(150, 135, 106, 0.3);
+  }
+  .faq__q {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 10px;
+  }
+  .faq__q-mark {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--brand-brown-dark);
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .faq__a {
+    font-size: 14px;
+    color: #6B6B6B;
+    line-height: 1.8;
+    padding-left: 36px;
+  }
+  .faq__a-with-img {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .faq__a-img {
+    flex: none;
+    width: 64px;
+    height: 84px;
+    object-fit: contain;
+    background: var(--brand-cream);
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  @media (max-width: 560px) {
+    .faq { padding: 60px 20px; }
+    .faq__item { padding: 18px 18px; }
+  }
+</style>
+
+<section class="faq">
+  <div class="faq__inner">
+    <h2 class="faq__title">私訊前，<span>先幫你想到的問題</span></h2>
+    <p class="faq__desc">不確定的地方，這裡先回答一輪</p>
+
+    <div class="faq__item">
+      <div class="faq__q"><span class="faq__q-mark">Q</span>敏感肌、正在爆痘也能用嗎？</div>
+      <div class="faq__a">每個人膚況不同，建議私訊告訴我們你目前的狀況（例如正在發炎、有傷口），我們會誠實建議適不適合現在使用，或該怎麼搭配比較安全。</div>
+    </div>
+
+    <div class="faq__item">
+      <div class="faq__q"><span class="faq__q-mark">Q</span>跟我現在在用的保養品衝突嗎？</div>
+      <div class="faq__a">精華液通常可以疊加在原本的保養程序裡，但如果你正在用高濃度酸類、A 醇等刺激性成分，建議私訊我們，我們幫你排出安全的使用順序，不要自己亂疊。</div>
+    </div>
+
+    <div class="faq__item">
+      <div class="faq__q"><span class="faq__q-mark">Q</span>價格怎麼算？在哪裡買？</div>
+      <div class="faq__a">目前郁宬還沒有開放線上商店，私訊 IG 或 FB 我們會直接跟你說明目前的方案與購買方式，也可以順便諮詢適不適合你的膚況。</div>
+    </div>
+
+    <div class="faq__item">
+      <div class="faq__q"><span class="faq__q-mark">Q</span>是台灣公司貨、有保障嗎？</div>
+      <div class="faq__a">郁宬是韓國原廠 CellexRnD 的台灣總代理，不是國內分裝或代購，成分與濃度皆依原廠標準進口，私訊我們也可以提供相關證明資料。</div>
+    </div>
+
+    <div class="faq__item">
+      <div class="faq__q"><span class="faq__q-mark">Q</span>精華液跟安瓶要一起買嗎？</div>
+      <div class="faq__a faq__a-with-img">
+        <img class="faq__a-img" src="郁宬/S__125337624_0.jpg" alt="Cellex miR Exosome Skin Booster Ampoule 外泌體肌活安瓶">
+        <span>不用，精華液單獨使用就能顧到日常保養。安瓶是更高濃度的加強款，適合搭配醫美療程或想加強修復的人，私訊我們可以幫你評估要不要加購。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  區塊⑧：CTA（收尾）
+============================================================ -->
+<style>
+  .final-cta {
+    background: linear-gradient(160deg, #46403570 0%, var(--brand-brown-dark) 100%), var(--brand-brown-dark);
+    padding: 90px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta__inner {
+    max-width: 620px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .final-cta__eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #F0E9DA;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+  .final-cta h2 {
+    font-size: clamp(24px, 4.5vw, 34px);
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .final-cta__desc {
+    font-size: 15px;
+    color: #F0E9DA;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+  }
+  .final-cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .final-cta .btn--primary {
+    background: #FFFFFF;
+    color: var(--brand-brown-dark);
+    box-shadow: 0 14px 30px -10px rgba(0,0,0,0.35);
+  }
+  .final-cta .btn--secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1.5px solid rgba(255,255,255,0.6);
+  }
+  .final-cta__reassure {
+    font-size: 13px;
+    color: #E4DAC5;
+  }
+
+  @media (max-width: 480px) {
+    .final-cta { padding: 64px 20px; }
+    .final-cta .btn { flex: 1 1 auto; justify-content: center; }
+  }
+</style>
+
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <span class="final-cta__eyebrow">韓國原廠 CellexRnD 台灣總代理</span>
+    <h2>先私訊聊聊你的膚況，<br>我們幫你判斷適不適合</h2>
+    <p class="final-cta__desc">
+      不用馬上決定要不要買，先讓我們了解你的膚況，
+      給你最適合的建議——這是郁宬顧客都會先做的第一步。
+    </p>
+
+    <div class="final-cta__buttons">
+      <a href="https://ig.me/m/yc.skinlux" class="btn btn--primary" target="_blank" rel="noopener">IG 私訊詢問</a>
+      <a href="https://m.me/1163216400216764" class="btn btn--secondary" target="_blank" rel="noopener">FB 私訊詢問</a>
+    </div>
+
+    <p class="final-cta__reassure">郁宬 YU CHENG SKINLUX ｜ 韓國 CellexRnD 台灣總代理</p>
+  </div>
+</section>
 </body>
 </html>
